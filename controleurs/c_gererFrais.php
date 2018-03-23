@@ -19,6 +19,8 @@ $mois = getMois(date('d/m/Y'));
 $numAnnee = substr($mois, 0, 4);
 $numMois = substr($mois, 4, 2);
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
+
 switch ($action) {
 case 'saisirFrais':
     if ($pdo->estPremierFraisMois($idVisiteur, $mois)) {
@@ -55,8 +57,25 @@ case 'supprimerFrais':
     $idFrais = filter_input(INPUT_GET, 'idFrais', FILTER_SANITIZE_STRING);
     $pdo->supprimerFraisHorsForfait($idFrais);
     break;
+case "validerFrais":
+
+    $listeVisiteur = $pdo->getListeVisiteurs();
+    
+break;
+
 }
 $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $mois);
 $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $mois);
-require 'vues/v_listeFraisForfait.php';
-require 'vues/v_listeFraisHorsForfait.php';
+
+if($_SESSION['typeCompte']=="Comptable") {
+    $lesFraisForfait = $pdo->getLesFraisForfait('000', '0000');
+    $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait('000', '0000');
+    require 'vues/v_validerFrais.php';
+
+
+
+}else {
+    require 'vues/v_listeFraisForfait.php';
+    require 'vues/v_listeFraisHorsForfait.php';
+}   
+

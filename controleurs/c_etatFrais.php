@@ -32,7 +32,7 @@ case 'voirEtatFrais':
     $moisASelectionner = $leMois;
     include 'vues/v_listeMois.php';
     $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $leMois);
-    $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $leMois);
+    $lesFraisForfait = $pdo->getLesFraisForfait("$idVisiteur", $leMois);
     $lesInfosFicheFrais = $pdo->getLesInfosFicheFrais($idVisiteur, $leMois);
     $numAnnee = substr($leMois, 0, 4);
     $numMois = substr($leMois, 4, 2);
@@ -42,3 +42,12 @@ case 'voirEtatFrais':
     $dateModif = dateAnglaisVersFrancais($lesInfosFicheFrais['dateModif']);
     include 'vues/v_etatFrais.php';
 }
+
+if($_SESSION['typeCompte']=="Comptable") {
+    $listeVisiteur = $pdo->getListeVisiteurs();
+    $leMois  = getMois(date('d/m/Y'));
+    $lesFraisForfait = $pdo->getLesFraisForfait("000", "0000");
+    require 'vues/v_suivrePaiementFrais.php';
+}
+
+?>

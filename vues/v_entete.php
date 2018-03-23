@@ -14,6 +14,22 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
+<?php
+if($_SESSION["typeCompte"]=="Comptable"){
+    $libellePageFrais = "Valider les fiches de frais";
+    $iconeSuivisFrais = '<span class="glyphicon glyphicon-euro"></span>';
+    $libelleSuivisFrais = "Suivre le paiement des fiches de frais";
+    $linkGererFrais = '<a href="index.php?uc=gererFrais&action=validerFrais">';
+    $linkEtatFrais = '<a href="index.php?uc=etatFrais&action=suivrePaiement">';
+} else {
+    $libellePageFrais = "Renseigner la fiche de frais";
+    $iconeSuivisFrais = '<span class="glyphicon glyphicon-list-alt"></span>';
+    $libelleSuivisFrais = "Afficher mes fiches de frais";
+    $linkGererFrais = '<a href="index.php?uc=gererFrais&action=saisirFrais">';
+    $linkEtatFrais =  '<a href="index.php?uc=etatFrais&action=selectionnerMois">';
+}        
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,8 +39,19 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./styles/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
         <link href="./styles/style.css" rel="stylesheet">
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous">
+              
+        </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+</html>
+        <script type="text/javascript" src="./includes/js/ajax.js"></script>
     </head>
     <body>
         <div class="container">
@@ -50,15 +77,17 @@
                                 </a>
                             </li>
                             <li <?php if ($uc == 'gererFrais') { ?>class="active"<?php } ?>>
-                                <a href="index.php?uc=gererFrais&action=saisirFrais">
+                                    <?php echo $linkGererFrais; ?>
                                     <span class="glyphicon glyphicon-pencil"></span>
-                                    Renseigner la fiche de frais
+                                    <?php echo $libellePageFrais; ?> 
                                 </a>
                             </li>
                             <li <?php if ($uc == 'etatFrais') { ?>class="active"<?php } ?>>
-                                <a href="index.php?uc=etatFrais&action=selectionnerMois">
-                                    <span class="glyphicon glyphicon-list-alt"></span>
-                                    Afficher mes fiches de frais
+                            
+                                    <?php
+                                    echo $linkEtatFrais;
+                                    echo $iconeSuivisFrais;
+                                    echo $libelleSuivisFrais; ?>
                                 </a>
                             </li>
                             <li 

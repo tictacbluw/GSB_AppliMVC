@@ -18,6 +18,10 @@ require_once 'includes/class.pdogsb.inc.php';
 
 
 session_start();
+$token = md5(rand(9900,1111));
+$_SESSION['token'] = $token;
+setcookie('token',$token,time() + (86400),'/');
+
 
 require_once 'includes/debug.php';
 

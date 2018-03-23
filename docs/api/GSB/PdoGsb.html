@@ -1,0 +1,1006 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Docs For Class PdoGsb</title>
+	<link rel="stylesheet" type="text/css" id="layout" href="../media/layout.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../media/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../media/print.css" media="print">
+</head>
+
+<body>
+<div id="header">
+	<div id="navLinks">
+        
+                                                                            
+                            	        [ <a href="../classtrees_GSB.html">Class Tree: GSB</a> ]
+            [ <a href="../elementindex_GSB.html">Index: GSB</a> ]
+        		[ <a href="../elementindex.html">All elements</a> ]		
+	</div>
+	<div id="packagePosition">
+		<div id="packageTitle2">GSB</div>
+		<div id="packageTitle">GSB</div>
+		<div id="elementPath"> &middot; </div>
+	</div>
+</div>
+
+<div id="nav" class="small">
+	<div id="packages">
+		Packages:
+					<p><a href="../li_default.html">default</a></p>
+					<p><a href="../li_AJAX.html">AJAX</a></p>
+					<p><a href="../li_GSB.html">GSB</a></p>
+			</div>
+
+				<div id="index">
+			<div id="files">
+								Files:<br>
+								<a href="../GSB/_class.pdogsb.inc.php.html">		class.pdogsb.inc.php
+		</a><br>
+			<a href="../GSB/_debug.php.html">		debug.php
+		</a><br>
+			<a href="../GSB/_fct.inc.php.html">		fct.inc.php
+		</a><br>
+				</div>
+			<div id="interfaces">
+							</div>
+			<div id="classes">
+				Classes:<br>
+								<a href="../GSB/PdoGsb.html">		PdoGsb
+		</a><br>
+				</div>
+		</div>
+	</div>
+
+<div id="body">
+	    		<h1>Class: PdoGsb</h1>
+	<p style="margin: 0px;">Source Location: /class.pdogsb.inc.php</p>
+	
+
+<div class="leftcol">
+	<h3><a href="#class_details">Class Overview</a> <span class="smalllinenumber">[line 39]</span></h3>
+	<div id="classTree"><pre></pre>
+</div>
+	<div class="small">
+	<p>Classe d'accès aux données.</p>
+		<h4>Author(s):</h4>
+	<ul>
+								<li>José GIL &lt;<a href="mailto:jgil@ac-nice.fr">jgil@ac-nice.fr</a>&gt;</li>
+											<li>Cheri Bibi - Réseau CERTA &lt;<a href="mailto:contact@reseaucerta.org">contact@reseaucerta.org</a>&gt;</li>
+																										</ul>
+	<h4>Version:</h4>
+	<ul>
+																		<li>Release: 1.0</li>
+																					</ul>
+
+	<h4>Copyright:</h4>
+	<ul>
+																							<li>2017 Réseau CERTA</li>
+																</li>
+	</div>
+</div>
+
+<div class="middlecol">
+	<h3><a href="#class_vars">Variables</a></h3>
+	<ul class="small">
+			</ul>
+	<h3><a href="#class_consts">Constants</a></h3>
+	<ul class="small">
+			</ul>
+</div>
+<div class="rightcol">
+	<h3><a href="#class_methods">Methods</a></h3>
+	<ul class="small">
+				<li><a href="../GSB/PdoGsb.html#method__destruct">__destruct</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodcreeNouveauFraisHorsForfait">creeNouveauFraisHorsForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodcreeNouvellesLignesFrais">creeNouvellesLignesFrais</a></li>
+				<li><a href="../GSB/PdoGsb.html#methoddernierMoisSaisi">dernierMoisSaisi</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodestPremierFraisMois">estPremierFraisMois</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetInfosUtilisateur">getInfosUtilisateur</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesFrais">getLesFrais</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesFraisForfait">getLesFraisForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesFraisHorsForfait">getLesFraisHorsForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesFraisHorsForfaitParId">getLesFraisHorsForfaitParId</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesIdFrais">getLesIdFrais</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesInfosFicheFrais">getLesInfosFicheFrais</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetLesMoisDisponibles">getLesMoisDisponibles</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetListeVisiteurs">getListeVisiteurs</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetNbjustificatifs">getNbjustificatifs</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodgetPdoGsb">getPdoGsb</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodmajEtatFicheFrais">majEtatFicheFrais</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodmajFraisForfait">majFraisForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodmajFraisHorsForfait">majFraisHorsForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodmajMontantValide">majMontantValide</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodmajNbJustificatifs">majNbJustificatifs</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodrefuserFraisHorsForfait">refuserFraisHorsForfait</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodsetNbjustificatifs">setNbjustificatifs</a></li>
+				<li><a href="../GSB/PdoGsb.html#methodsupprimerFraisHorsForfait">supprimerFraisHorsForfait</a></li>
+			</ul>
+</div>
+
+<div id="content">
+<hr>
+	<div class="contents">
+	</div>
+
+	<div class="leftCol">
+    	<h2>Inherited Variables</h2>
+		<h2>Inherited Constants</h2>
+		</div>
+
+	<div class="rightCol">
+	<h2>Inherited Methods</h2>
+		</div>
+	<br clear="all">
+	<hr>
+
+	<a name="class_details"></a>
+	<h2>Class Details</h2>
+	<p align="center"><strong>Classe d'accès aux données.
+</strong></p>
+<p>Utilise les services de la classe PDO  pour l'application GSB  Les attributs sont tous statiques,  les 4 premiers pour la connexion  $monPdo de type PDO  $monPdoGsb qui contiendra l'unique instance de la classe</p><p>PHP Version 7</p><h4>Tags:</h4>
+<ul>
+	<li><b>author</b> - José GIL &lt;<a href="mailto:jgil@ac-nice.fr">jgil@ac-nice.fr</a>&gt;</li>
+	<li><b>author</b> - Cheri Bibi - Réseau CERTA &lt;<a href="mailto:contact@reseaucerta.org">contact@reseaucerta.org</a>&gt;</li>
+	<li><b>version</b> - Release: 1.0</li>
+	<li><b>copyright</b> - 2017 Réseau CERTA</li>
+	<li><b>link</b> - <a href="http://www.php.net/manual/fr/book.pdo.php">PHP Data Objects sur php.net</a></li>
+	<li><b>license</b> - Réseau</li>
+</ul>
+	<p class="small" style="color: #334B66;">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_vars"></a>
+	<h2>Class Variables</h2>
+	
+	<hr>
+	<a name="class_methods"></a>
+	<h2>Class Methods</h2>
+		<a name="methodgetPdoGsb"></a>
+	<p></p>
+	<h3>static getPdoGsb</h3>
+	<div class="indent">
+		<p>
+		<code>static l'unique getPdoGsb(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 77]</p>
+		<p align="center"><strong>Fonction statique qui crée l'unique instance de la classe  Appel : $instancePdoGsb = PdoGsb::getPdoGsb();
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - objet de la classe PdoGsb</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<a name="method__destruct"></a>
+	<p></p>
+	<h3>__destruct</h3>
+	<div class="indent">
+		<p>
+		<code>void __destruct(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 66]</p>
+		<p align="center"><strong>Méthode destructeur appelée dès qu'il n'y a plus de référence sur un  objet donné, ou dans n'importe quel ordre pendant la séquence d'arrêt.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodcreeNouveauFraisHorsForfait"></a>
+	<p></p>
+	<h3>creeNouveauFraisHorsForfait</h3>
+	<div class="indent">
+		<p>
+		<code>null creeNouveauFraisHorsForfait(
+String
+$idVisiteur, String
+$mois, String
+$libelle, String
+$date, Float
+$montant)</code>
+		</p>
+	
+		<p class="linenumber">[line 486]</p>
+		<p align="center"><strong>Crée un nouveau frais hors forfait pour un visiteur un mois donné  à partir des informations fournies en paramètre
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">String</span>
+		<b>$libelle</b> 
+		- 
+		Libellé du frais</li>
+			<li>
+		<span class="type">String</span>
+		<b>$date</b> 
+		- 
+		Date du frais au format français jj//mm/aaaa</li>
+			<li>
+		<span class="type">Float</span>
+		<b>$montant</b> 
+		- 
+		Montant du frais</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodcreeNouvellesLignesFrais"></a>
+	<p></p>
+	<h3>creeNouvellesLignesFrais</h3>
+	<div class="indent">
+		<p>
+		<code>null creeNouvellesLignesFrais(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 441]</p>
+		<p align="center"><strong>Crée une nouvelle fiche de frais et les lignes de frais au forfait  pour un visiteur et un mois donnés
+</strong></p>
+<p>Récupère le dernier mois en cours de traitement, met à 'CL' son champs  idEtat, crée une nouvelle fiche de frais avec un idEtat à 'CR' et crée  les lignes de frais forfait de quantités nulles</p><h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methoddernierMoisSaisi"></a>
+	<p></p>
+	<h3>dernierMoisSaisi</h3>
+	<div class="indent">
+		<p>
+		<code>le dernierMoisSaisi(
+String
+$idVisiteur)</code>
+		</p>
+	
+		<p class="linenumber">[line 414]</p>
+		<p align="center"><strong>Retourne le dernier mois en cours d'un visiteur
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - mois sous la forme aaaamm</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodestPremierFraisMois"></a>
+	<p></p>
+	<h3>estPremierFraisMois</h3>
+	<div class="indent">
+		<p>
+		<code>vrai estPremierFraisMois(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 390]</p>
+		<p align="center"><strong>Teste si un visiteur possède une fiche de frais pour le mois passé en argument
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - ou faux</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetInfosUtilisateur"></a>
+	<p></p>
+	<h3>getInfosUtilisateur</h3>
+	<div class="indent">
+		<p>
+		<code>l'id, getInfosUtilisateur(
+String
+$login, String
+$mdp)</code>
+		</p>
+	
+		<p class="linenumber">[line 93]</p>
+		<p align="center"><strong>Retourne les informations d'un utilisateur
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - le nom, le prénom et le type de compte sous la forme d'un tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$login</b> 
+		- 
+		Login du utilisateur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mdp</b> 
+		- 
+		Mot de passe du utilisateur</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesFrais"></a>
+	<p></p>
+	<h3>getLesFrais</h3>
+	<div class="indent">
+		<p>
+		<code>un getLesFrais(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 313]</p>
+		<p align="center"><strong>Retourne tous les id et le montant de la table FraisForfait
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesFraisForfait"></a>
+	<p></p>
+	<h3>getLesFraisForfait</h3>
+	<div class="indent">
+		<p>
+		<code>l'id, getLesFraisForfait(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 274]</p>
+		<p align="center"><strong>Retourne sous forme d'un tableau associatif toutes les lignes de frais  au forfait concernées par les deux arguments
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - le libelle et la quantité sous la forme d'un tableau  associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesFraisHorsForfait"></a>
+	<p></p>
+	<h3>getLesFraisHorsForfait</h3>
+	<div class="indent">
+		<p>
+		<code>tous getLesFraisHorsForfait(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 144]</p>
+		<p align="center"><strong>Retourne sous forme d'un tableau associatif toutes les lignes de frais  hors forfait concernées par les deux arguments.
+</strong></p>
+<p>La boucle foreach ne peut être utilisée ici car on procède  à une modification de la structure itérée - transformation du champ date-</p><h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - les champs des lignes de frais hors forfait sous la forme  d'un tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesFraisHorsForfaitParId"></a>
+	<p></p>
+	<h3>getLesFraisHorsForfaitParId</h3>
+	<div class="indent">
+		<p>
+		<code>tous getLesFraisHorsForfaitParId(
+
+$id, String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 174]</p>
+		<p align="center"><strong>Retourne sous forme d'un tableau associatif toutes les lignes de frais  hors forfait concernées par les deux arguments.
+</strong></p>
+<p>La boucle foreach ne peut être utilisée ici car on procède  à une modification de la structure itérée - transformation du champ date-</p><h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - les champs des lignes de frais hors forfait sous la forme  d'un tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type"></span>
+		<b>$id</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesIdFrais"></a>
+	<p></p>
+	<h3>getLesIdFrais</h3>
+	<div class="indent">
+		<p>
+		<code>un getLesIdFrais(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 298]</p>
+		<p align="center"><strong>Retourne tous les id de la table FraisForfait
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesInfosFicheFrais"></a>
+	<p></p>
+	<h3>getLesInfosFicheFrais</h3>
+	<div class="indent">
+		<p>
+		<code>un getLesInfosFicheFrais(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 584]</p>
+		<p align="center"><strong>Retourne les informations d'une fiche de frais d'un visiteur pour un  mois donné
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - tableau avec des champs de jointure entre une fiche de frais          et la ligne d'état</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLesMoisDisponibles"></a>
+	<p></p>
+	<h3>getLesMoisDisponibles</h3>
+	<div class="indent">
+		<p>
+		<code>un getLesMoisDisponibles(
+String
+$idVisiteur)</code>
+		</p>
+	
+		<p class="linenumber">[line 551]</p>
+		<p align="center"><strong>Retourne les mois pour lesquel un visiteur a une fiche de frais
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - tableau associatif de clé un mois -aaaamm- et de valeurs          l'année et le mois correspondant</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetListeVisiteurs"></a>
+	<p></p>
+	<h3>getListeVisiteurs</h3>
+	<div class="indent">
+		<p>
+		<code>le getListeVisiteurs(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 116]</p>
+		<p align="center"><strong>Retourne la liste des visiteurs
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - nom, le prénom, l'id des visiteurs sous la forme d'un tableau associatif</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetNbjustificatifs"></a>
+	<p></p>
+	<h3>getNbjustificatifs</h3>
+	<div class="indent">
+		<p>
+		<code>le getNbjustificatifs(
+String
+$idVisiteur, String
+$mois)</code>
+		</p>
+	
+		<p class="linenumber">[line 228]</p>
+		<p align="center"><strong>Retourne le nombre de justificatif d'un visiteur pour un mois donné
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - nombre entier de justificatifs</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmajEtatFicheFrais"></a>
+	<p></p>
+	<h3>majEtatFicheFrais</h3>
+	<div class="indent">
+		<p>
+		<code>null majEtatFicheFrais(
+String
+$idVisiteur, String
+$mois, String
+$etat)</code>
+		</p>
+	
+		<p class="linenumber">[line 614]</p>
+		<p align="center"><strong>Modifie l'état et la date de modification d'une fiche de frais.
+</strong></p>
+<p>Modifie le champ idEtat et met la date de modif à aujourd'hui.</p><h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">String</span>
+		<b>$etat</b> 
+		- 
+		Nouvel état de la fiche de frais</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmajFraisForfait"></a>
+	<p></p>
+	<h3>majFraisForfait</h3>
+	<div class="indent">
+		<p>
+		<code>null majFraisForfait(
+String
+$idVisiteur, String
+$mois, Array
+$lesFrais)</code>
+		</p>
+	
+		<p class="linenumber">[line 334]</p>
+		<p align="center"><strong>Met à jour la table ligneFraisForfait  Met à jour la table ligneFraisForfait pour un visiteur et  un mois donné en enregistrant les nouveaux montants
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">Array</span>
+		<b>$lesFrais</b> 
+		- 
+		tableau associatif de clé idFrais et                            de valeur la quantité pour ce frais</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmajFraisHorsForfait"></a>
+	<p></p>
+	<h3>majFraisHorsForfait</h3>
+	<div class="indent">
+		<p>
+		<code>null majFraisHorsForfait(
+String
+$id, String
+$date, String
+$libelle, Float
+$montant)</code>
+		</p>
+	
+		<p class="linenumber">[line 203]</p>
+		<p align="center"><strong>Met à jour la table ligneHorsFraisForfait  Met à jour la table ligneHorsFraisForfait pour un visiteur et  un mois donné en enregistrant les nouveaux montants
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$id</b> 
+		- 
+		ID du horsforfait</li>
+			<li>
+		<span class="type">String</span>
+		<b>$date</b> 
+		- 
+		date sous la forme aaaa-mm-dd</li>
+			<li>
+		<span class="type">String</span>
+		<b>$libelle</b> 
+		- 
+		Libelle</li>
+			<li>
+		<span class="type">Float</span>
+		<b>$montant</b> 
+		- 
+		montant</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmajMontantValide"></a>
+	<p></p>
+	<h3>majMontantValide</h3>
+	<div class="indent">
+		<p>
+		<code>null majMontantValide(
+String
+$idVisiteur, String
+$mois, Float
+$montant)</code>
+		</p>
+	
+		<p class="linenumber">[line 639]</p>
+		<p align="center"><strong>Met à jour le montantvalide de la fichefrais  Modifie le champ montantvalide et met la date de modif à aujourd'hui.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">Float</span>
+		<b>$montant</b> 
+		- 
+		Nouveau montant</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmajNbJustificatifs"></a>
+	<p></p>
+	<h3>majNbJustificatifs</h3>
+	<div class="indent">
+		<p>
+		<code>null majNbJustificatifs(
+String
+$idVisiteur, String
+$mois, Integer
+$nbJustificatifs)</code>
+		</p>
+	
+		<p class="linenumber">[line 364]</p>
+		<p align="center"><strong>Met à jour le nombre de justificatifs de la table ficheFrais  pour le mois et le visiteur concerné
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">Integer</span>
+		<b>$nbJustificatifs</b> 
+		- 
+		Nombre de justificatifs</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodrefuserFraisHorsForfait"></a>
+	<p></p>
+	<h3>refuserFraisHorsForfait</h3>
+	<div class="indent">
+		<p>
+		<code>null refuserFraisHorsForfait(
+String
+$idFrais)</code>
+		</p>
+	
+		<p class="linenumber">[line 531]</p>
+		<p align="center"><strong>Refuse le frais hors forfait dont l'id est passé en argument
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idFrais</b> 
+		- 
+		ID du frais</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsetNbjustificatifs"></a>
+	<p></p>
+	<h3>setNbjustificatifs</h3>
+	<div class="indent">
+		<p>
+		<code>void setNbjustificatifs(
+String
+$idVisiteur, String
+$mois, Int
+$nbJustificatifs)</code>
+		</p>
+	
+		<p class="linenumber">[line 250]</p>
+		<p align="center"><strong>Mets à jour le nombre de justificatif d'un visiteur pour un mois donné
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idVisiteur</b> 
+		- 
+		ID du visiteur</li>
+			<li>
+		<span class="type">String</span>
+		<b>$mois</b> 
+		- 
+		Mois sous la forme aaaamm</li>
+			<li>
+		<span class="type">Int</span>
+		<b>$nbJustificatifs</b> 
+		- 
+		le nombre de justificatifs</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsupprimerFraisHorsForfait"></a>
+	<p></p>
+	<h3>supprimerFraisHorsForfait</h3>
+	<div class="indent">
+		<p>
+		<code>null supprimerFraisHorsForfait(
+String
+$idFrais)</code>
+		</p>
+	
+		<p class="linenumber">[line 514]</p>
+		<p align="center"><strong>Supprime le frais hors forfait dont l'id est passé en argument
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">String</span>
+		<b>$idFrais</b> 
+		- 
+		ID du frais</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_consts"></a>
+	<h2>Class Constants</h2>
+	</div>
+	<div id="credit">
+		<hr>
+		Documentation generated on Mon, 19 Mar 2018 22:53:48 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	</div>
+</div>
+</body>
+</html>
