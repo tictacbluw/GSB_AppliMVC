@@ -39,7 +39,7 @@ if($_SESSION["typeCompte"]=="Comptable"){
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
         <link href="./styles/style.css" rel="stylesheet">
         <script
@@ -49,8 +49,9 @@ if($_SESSION["typeCompte"]=="Comptable"){
               
         </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 </html>
+        <script type="text/javascript" src="./includes/js/functions.js"></script>
         <script type="text/javascript" src="./includes/js/ajax.js"></script>
     </head>
     <body>

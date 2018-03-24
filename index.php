@@ -18,9 +18,6 @@ require_once 'includes/class.pdogsb.inc.php';
 
 
 session_start();
-$token = md5(rand(9900,1111));
-$_SESSION['token'] = $token;
-setcookie('token',$token,time() + (86400),'/');
 
 
 require_once 'includes/debug.php';
@@ -29,6 +26,14 @@ require_once 'includes/debug.php';
 $pdo = PdoGsb::getPdoGsb();
 
 $estConnecte = estConnecte();
+if($estConnecte ==true){
+
+    $token = md5(rand(9900,1111));
+    $_SESSION['token'] = $token;
+    setcookie('token',$token,time() + (86400),'/');
+
+}
+
 require 'vues/v_entete.php';
 $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
 if ($uc && !$estConnecte) {

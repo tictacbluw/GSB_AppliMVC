@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="lstMois" accesskey="n">Mois : </label>
-                    <select id="lstMois" name="lstMois" data-source="./includes/ajax.php?action=getmois&visiteur=test" data-valueKey="mois" data-displayKey="moisFomat"  class="form-control">    
+                    <select id="lstMois" name="lstMois" class="form-control">    
                     </select>
                 </div>
         </form>

@@ -11,7 +11,7 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 
-$debug = false;
+$debug = true;
 
 if ($debug == true) {
 
