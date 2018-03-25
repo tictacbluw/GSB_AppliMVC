@@ -13,17 +13,12 @@
  *
  * 
  */
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-include('../class.pdogsb.inc.php');
-include('../fct.inc.php');
-$pdo = PdoGsb::getPdoGsb();
+
 $idVisiteur = filter_input(INPUT_POST, 'idVisiteur', FILTER_SANITIZE_STRING);
 $mois = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
 
-$fraisForfait = $pdo->getLesFraisForfait("a17", "201803");
-$fraisHorsForfait = $pdo->getLesFraisHorsForfait("a17", "201804");
+$fraisForfait = $pdo->getLesFraisForfait($idVisiteur, $mois);
+$fraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $mois);
 $lesFrais = $pdo->getLesFrais();
 $montantValide = 0.00; 
 
