@@ -93,9 +93,12 @@ function transformToAssocArray( prmstr ) {
   return params;
 }
 
+
+
 function rembourserFicheFrais() {
     var idVisiteur = $("#lstVisiteur").val();
     var mois = $("#lstMois").val();
+    var token = getToken();
     $.ajax({
         type:"GET",
         cache:false,

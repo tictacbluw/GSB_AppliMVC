@@ -13,28 +13,44 @@
  *
  * 
  */
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('../class.pdogsb.inc.php');
+include('../fct.inc.php');
+$pdo = PdoGsb::getPdoGsb();
 $idVisiteur = filter_input(INPUT_POST, 'idVisiteur', FILTER_SANITIZE_STRING);
 $mois = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
-$etp = filter_input(INPUT_POST, 'etp', FILTER_SANITIZE_STRING);
-$km = filter_input(INPUT_POST, 'km', FILTER_SANITIZE_STRING);
-$nui = filter_input(INPUT_POST, 'nui', FILTER_SANITIZE_STRING);
-$rep = filter_input(INPUT_POST, 'rep', FILTER_SANITIZE_STRING);
-$lignesHorsForfait = $_POST['lignesHorsForfait'];
+
+$fraisForfait = $pdo->getLesFraisForfait("a17", "201803");
+$fraisHorsForfait = $pdo->getLesFraisHorsForfait("a17", "201804");
 $lesFrais = $pdo->getLesFrais();
 $montantValide = 0.00; 
 
-foreach ($lignesHorsForfait[0] as $libelle => $montant) {
-   if(substr( $libelle, 0, 5 ) != "REFUSE"){
-    $montantValide += floatval($montant);
-   }
 
+$etpQty = floatval($fraisForfait[0]["quantite"]);
+$kmQty = floatval($fraisForfait[1]["quantite"]);
+$nuiQty =  floatval($fraisForfait[2]["quantite"]);
+$repQty = floatval($fraisForfait[3]["quantite"]);
+
+
+
+
+$montantValide += $lesFrais[0]['montant']*$etpQty;
+$montantValide += $lesFrais[1]['montant']*$kmQty;
+$montantValide += $lesFrais[2]['montant']*$nuiQty;
+$montantValide += $lesFrais[3]['montant']*$repQty;
+
+
+
+foreach ($fraisHorsForfait as $ligneHorsForfait) {
+
+    if(substr( $ligneHorsForfait["libelle"], 0, 6 ) != "REFUSE"){
+     $montantValide +=floatval($ligneHorsForfait["montant"]);
+    }
 
 }
 
-$montantValide += $lesFrais[0]['montant']*$etp;
-$montantValide += $lesFrais[1]['montant']*$km;
-$montantValide += $lesFrais[2]['montant']*$nui;
-$montantValide += $lesFrais[3]['montant']*$rep;
 
 
 $etat = "VA";
