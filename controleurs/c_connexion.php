@@ -25,7 +25,7 @@ case 'demandeConnexion':
     break;
 case 'valideConnexion':
     $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-    $mdp = filter_input(INPUT_POST, 'mdp', FILTER_SANITIZE_STRING);
+    $mdp = md5(filter_input(INPUT_POST, 'mdp', FILTER_SANITIZE_STRING));
     
     $utilisateur = $pdo->getInfosUtilisateur($login, $mdp);
     if (!is_array($utilisateur)) {
