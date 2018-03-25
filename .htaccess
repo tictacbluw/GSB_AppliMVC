@@ -1,0 +1,13 @@
+Order allow,deny
+Deny from All
+
+<FilesMatch "^(index\.php)?$">
+        Allow from All
+</FilesMatch>
+<FilesMatch "^(ajax\.php)?$">
+        Allow from All
+</FilesMatch>
+<FilesMatch ".*\.(css|js)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
