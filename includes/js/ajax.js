@@ -208,25 +208,11 @@ $( document ).ready(function() {
         $("#validerFrais").click(function() {
             var idVisiteur = $("#lstVisiteur").val();
             var mois = $("#lstMois").val();
-            var etp =  $('input[name="lesFrais[ETP]"]').val();
-            var km  = $('input[name="lesFrais[KM]"]').val();
-            var nui = $('input[name="lesFrais[NUI]"]').val();
-            var rep =  $('input[name="lesFrais[REP]"]').val();
-            var lignesHorsForfait = [];
-            $('#tabHorsForfait tr').each(function () {
-                
-                $(this).find('td input').each(function () {
-                    var idLigne = $(this).attr('id');
-                    lignesHorsForfait["'"+idLigne+"'"] = $(this).val();
-                    
-                });
-            });
-           console.log(lignesHorsForfait);
            $.ajax({
             type:"POST",
             cache:false,
             url:"./includes/ajax.php?action=validerFicheFrais&token="+token,
-            data:{ 'idVisiteur': idVisiteur , 'mois': mois, 'etp':etp, 'km':km, 'nui':nui, 'rep':rep, 'lignesHorsForfait':lignesHorsForfait },
+            data:{ 'idVisiteur': idVisiteur , 'mois': mois},
             success: function () {
                 alert("Fiche de Frais mis à jour !");  
 
