@@ -4,7 +4,10 @@ $( document ).ready(function() {
     var token = getToken();
 
 
-
+/**
+ * Evenement ce déclenchant lorsque la selection lstVisiteur change
+ * Rempli la selection lstMois en fonction du visiteur selectionné dans la selection lstVisiteur
+ */
     $( "#lstVisiteur" ).change(function() {
         var idVisiteur = $("#lstVisiteur").val();
         $('#lstMois').empty();
@@ -36,7 +39,10 @@ $( document ).ready(function() {
     
     })
 
-  
+/**
+ * Evenement ce déclenchant lorsque la selection lstmois change
+ * Charge la fiche de frais du mois selectionner dans lstMois et remplis les formulaires forfait et hors forfait correspondant
+ */
     $( "#lstMois" ).click(function() {
         var params = getUrlParametres();
         var idVisiteur = $("#lstVisiteur").val();
@@ -111,7 +117,10 @@ $( document ).ready(function() {
                     $('#tabHorsForfait tbody').append('<tr><td>'+data[i].date+'</td><td>'+data[i].libelle+'</td><td>'+data[i].montant+'</td></tr>');
                 }
             });
-
+            /**
+            * Evenement ce déclenchant lorsque l'on clique sur le bouton paiementFicheFrais
+            * Met à jour l'état de la fiche de frais en remboursé
+            */
             $("#paiementFicheFrais").click(function() {
                 var idVisiteur = $("#lstVisiteur").val();
                 var mois = $("#lstMois").val();
@@ -142,7 +151,10 @@ $( document ).ready(function() {
     })
 
 
-
+/**
+ * Evenement ce déclenchant lorsque l'on clique sur le bouton resetElemForfait
+ * Réinitalise le formulaire Frais forfaitisés avec les valeurs par defaut de la fiche de frais
+ */
     $("#resetElemForfait").click(function() {
         var idVisiteur = $("#lstVisiteur").val();
         var mois = $("#lstMois").val();
@@ -156,6 +168,10 @@ $( document ).ready(function() {
 
     });
 
+/**
+ * Evenement ce déclenchant lorsque l'on clique sur le bouton ReinitialiserFrais
+ * Réinitalise les formulaire Frais forfaitisés et hors forfait avec les valeurs par defaut de la fiche de frais
+ */
     $("#ReinitialiserFrais").click(function() {
         var idVisiteur = $("#lstVisiteur").val();
         var mois = $("#lstMois").val();
@@ -184,6 +200,10 @@ $( document ).ready(function() {
 
     });
 
+/**
+ * Evenement ce déclenchant lorsque l'on clique sur le bouton majElemForfait
+ * Met à jour dans la base de donnée la ligne Frais forfaitisés de la fiche de frais
+ */
     $("#majElemForfait").click(function() {
         var idVisiteur = $("#lstVisiteur").val();
         var mois = $("#lstMois").val();
@@ -204,7 +224,10 @@ $( document ).ready(function() {
 
         });
 
-
+/**
+ * Evenement ce déclenchant lorsque l'on clique sur le bouton validerFrais
+ * Valide la fiche de frais
+ */
         $("#validerFrais").click(function() {
             var idVisiteur = $("#lstVisiteur").val();
             var mois = $("#lstMois").val();
@@ -220,7 +243,10 @@ $( document ).ready(function() {
           });  
         });
 
-
+/**
+ * Evenement ce déclenchant lorsque l'input nbJustificatifs change de valeur
+ * Met à jour dans la base de donnée le nombre de justificatifs de la fiche de frais
+ */
         $( "#nbJustificatifs" ).change(function() {
             var idVisiteur = $("#lstVisiteur").val();
             var mois = $("#lstMois").val();
