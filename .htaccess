@@ -7,7 +7,7 @@ Deny from All
 <FilesMatch "^(ajax\.php)?$">
         Allow from All
 </FilesMatch>
-<FilesMatch ".*\.(css|js)$">
+<FilesMatch ".*\.(css|js|html|tpl)$">
     Order Allow,Deny
     Allow from all
 </FilesMatch>
